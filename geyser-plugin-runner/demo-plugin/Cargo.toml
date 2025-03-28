@@ -1,6 +1,6 @@
 [package]
-name = "demo-plugin"
-version = "0.1.0"
+name = "solana-geyser-plugin-clickhouse"
+version = "1.0.0"
 edition = "2021"
 publish = false
 
@@ -8,9 +8,26 @@ publish = false
 crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-agave-geyser-plugin-interface = { workspace = true }
-colored = { workspace = true }
-tracing = { workspace = true }
+anyhow = { version = "1.0.86", features = ["std"] }
+chrono = "0.4.38"
+colored = "2.0.2"
+env_logger = "0.11.5"
+log = "0.4.22"
+serde = "1.0.200"
+serde_json = "1.0.127"
+serde_with = "3.9.0"
+agave-geyser-plugin-interface = "~2.1.11"
+clickhouse = { version = "0.12.2", features = ["native-tls", "inserter"] }
+solana-sdk = { workspace = true }
+solana-transaction-status = { workspace = true }
+tokio = { version = "1.28", features = ["full"] }
+tokio-retry = "0.3"
+prometheus = "0.13"
+warp = "0.3"
+futures = "0.3"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.12", features = ["fmt", "env-filter"] }
+decimal-rs = "0.1.0"
 
-[package.metadata.docs.rs]
-targets = ["x86_64-unknown-linux-gnu"]
+[dev-dependencies]
+clickhouse = { version = "0.12.2", features = ["test-util"] }

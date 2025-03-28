@@ -1,0 +1,13 @@
+{
+	"libpath": "/Users/azothzephyr/Documents/code/trustless/solana/target/release/libsolana_geyser_plugin_clickhouse.so",
+	"clickhouse": {
+		"url": "https://i8pvie3nu7.us-east-1.aws.clickhouse.cloud:8443",
+		"database": "solana",
+		"username": "default",
+		"password": "o7HdD4LU0Q~bi",
+		"batch_size": 1000,
+		"panic_on_db_errors": true,
+		"blocks_table": "test_blocks",
+		"transactions_table": "test_transactions"
+	}
+}

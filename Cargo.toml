@@ -2,8 +2,8 @@
 members = [
     "geyser-plugin-runner",
     "geyser-plugin-runner/demo-plugin",
-    "old-faithful-proto",
-    "txstatus",
+    #"old-faithful-proto",
+    #"txstatus",
 ]
 resolver = "2"
 
